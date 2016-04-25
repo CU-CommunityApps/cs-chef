@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'kuali-tags::default' do
+describe 'cs-tags::default' do
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
   it 'does something' do

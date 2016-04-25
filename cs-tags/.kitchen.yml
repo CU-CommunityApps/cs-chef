@@ -17,5 +17,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[kuali-tags::default]
+      - recipe[cs-tags::default]
     attributes:
