@@ -28,15 +28,15 @@ docker_registry 'https://dtr.cucloud.net/' do
   email ''
 end
 
-remote_file '/tmp/amazon-ssm-agent.rpm' do
-  source 'https://amazon-ssm-us-east-1.s3.amazonaws.com/latest/linux_amd64/amazon-ssm-agent.rpm'
+remote_file '/tmp/amazon-ssm-agent.deb' do
+  source 'https://amazon-ssm-us-east-1.s3.amazonaws.com/latest/debian_amd64/amazon-ssm-agent.deb'
   action :create
 end
 
-rpm_package 'ssm-agent' do
-  source '/tmp/amazon-ssm-agent.rpm'
+dpkg_package 'ssm-agent' do
+  source '/tmp/amazon-ssm-agent.deb'
 end
 
-file '/tmp/amazon-ssm-agent.rpm' do
+file '/tmp/amazon-ssm-agent.deb' do
   action :delete
 end
